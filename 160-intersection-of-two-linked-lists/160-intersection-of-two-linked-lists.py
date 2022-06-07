@@ -7,9 +7,6 @@
 class Solution(object):
     def getIntersectionNode(self, headA, headB):
         
-        if headA == None or headB == None:
-            return None
-        
         tmpA, tmpB = headA, headB
         
         while True:
