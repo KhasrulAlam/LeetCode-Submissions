@@ -6,18 +6,10 @@
 
 class Solution(object):
     def getIntersectionNode(self, headA, headB):
-        
         tmpA, tmpB = headA, headB
-        
-        while True:
-            
-            if(tmpA==tmpB):
-                return tmpA
-            
-            if tmpA.next==None and tmpB.next==None:
-                return None
-            
-            tmpA= headB if tmpA.next is None else tmpA.next
-            tmpB= headA if tmpB.next is None else tmpB.next
+        while tmpA!= tmpB:
+            tmpA= headB if tmpA is None else tmpA.next
+            tmpB= headA if tmpB is None else tmpB.next
+        return tmpA
             
         
