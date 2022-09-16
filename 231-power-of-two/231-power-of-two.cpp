@@ -3,11 +3,11 @@ public:
     bool isPowerOfTwo(int n) {
         int cnt=0;
         while(n){
-            cnt+=(n&1);
+            int a= (n&1);
+            cnt+=a;
             n>>=1;
             
-            if(cnt>1)
-                break;
+            if(cnt>1) break;
         }
         if(cnt==1)
             return true;
